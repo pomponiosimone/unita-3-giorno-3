@@ -20,7 +20,7 @@ class SingleBook extends Component {
     const { book } = this.props;
     const { selected } = this.state;
 
-    // Stili condizionali per la card
+   
     const cardStyle = {
       border: selected ? '4px solid red' : '3px solid black',
       marginBottom: '10px'
