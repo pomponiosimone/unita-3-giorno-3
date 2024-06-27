@@ -20,9 +20,9 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <BookList books={books} /> {}
-    </div>
+   
+      <BookList books={books} /> 
+    
   );
 }
 

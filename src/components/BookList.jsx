@@ -1,14 +1,16 @@
 import React from 'react';
 import SingleBook from './SingleBook';
+import fantasy from '../data/fantasy.json'
+import {Container, Row} from 'react-bootstrap';
 
-const BookList = ({ books }) => {
+const BookList = () => {
     return (
-        <div>
-            {books.map((book, index) => (
-                <SingleBook key={index} book={book} />
-            ))}
-        </div>
-    );
-};
+        <Container>
+        <Row>
+          {fantasy.map((book) => (
+            <SingleBook key={book.id} book={book} />
+          ))}
+        </Row>
+      </Container>)}
 
 export default BookList;

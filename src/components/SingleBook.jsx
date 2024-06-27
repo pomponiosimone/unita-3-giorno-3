@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 class SingleBook extends Component {
   constructor(props) {
     super(props);
@@ -21,17 +21,17 @@ class SingleBook extends Component {
     const { selected } = this.state;
 
    
-    const cardStyle = { width:"18rem",
+    const cardStyle = { width:"17rem",
       border: selected ? '4px solid red' : '3px solid black',
-      marginBottom: '10px'
+      marginBottom: '5px'
     };
 
     return (
-      <Container>
-  <Row className='justify-content-center'>
-    <Col md="auto">
+     
+  
+    <Col md={3}>
       <Card style={cardStyle} onClick={this.handleClick}>
-        <Card.Img variant="top" src={process.env.PUBLIC_URL + book.cover} />
+        <Card.Img variant="top" src={process.env.PUBLIC_URL + book.img} />
         <Card.Body>
           <Card.Title>{book.title}</Card.Title>
           <Card.Text>
@@ -40,8 +40,8 @@ class SingleBook extends Component {
         </Card.Body>
       </Card>
     </Col>
-  </Row>
-</Container>
+
+
       
     );
   }
